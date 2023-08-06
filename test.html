@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AJAX Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h2>AJAX Example</h2>
+
+    <button id="getDataButton">Get Data</button>
+    <div id="result"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#getDataButton').click(function() {
+                $.ajax({
+                    url: 'data.php',
+                    type: 'GET',
+                    success: function(response) {
+                        $('#result').text(response);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

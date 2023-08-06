@@ -1,0 +1,41 @@
+{
+    "title": "Chief Executive Officer (CEO)",
+    "description": "Testing Questions",
+    "logoPosition": "right",
+    "pages": [
+     {
+      "name": "page1",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "Should security be among the top priorities in IT spending for your organization?",
+        "isRequired": true,
+        "choices": [
+         "Strongly disagree",
+         "Disagree",
+         "Neutral ",
+         "Agree",
+         "Strongly agree",
+         "Don't know"
+        ]
+       }
+      ]
+     },
+     {
+      "name": "page2",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "What percentage of IT budget do you believe should be allocated to security measures in your organization? (Select only one)",
+        "isRequired": true,
+        "choices": [
+         "0-5%",
+         "5-10%",
+         "10-15%",
+         ">20%"
+        ]
+       }
+      ]
+     }   
+    ]
+   }

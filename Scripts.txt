@@ -1,0 +1,26 @@
+GRANT ALL PRIVILEGES ON `kaberuka`.* TO 'root'@'localhost' IDENTIFIED BY PASSWORD 'encrypted_password' WITH GRANT OPTION 
+ALTER USER 'root'@'%' IDENTIFIED BY 'ukudox';
+CREATE USER 'dodosi'@'%' IDENTIFIED BY 'ukudox';
+GRANT ALL PRIVILEGES ON kaberuka.* TO 'dodosi'@'localhost';
+ALTER TABLE results MODIFY date TIMESTAMP;
+ALTER TABLE results MODIFY date TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+mysql -h 35.246.61.230 -P 3306 -u dodosi -p
+GRANT ALL PRIVILEGES ON *.* TO 'dodosi'@'%' IDENTIFIED BY 'ukudox';
+GRANT ALL PRIVILEGES ON *.* TO 'dodosi'@'35.246.61.230' IDENTIFIED BY 'ukudox';
+GRANT ALL PRIVILEGES ON *.* TO 'dodosi'@'%' IDENTIFIED BY 'ukudox' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+GRANT ALL PRIVILEGES ON kaberuka.* TO 'dodosi'@'%';
+CREATE USER 'dodosi'@'10.154.0.2' IDENTIFIED BY 'ukudox';
+GRANT ALL PRIVILEGES ON *.* TO 'dodosi'@'10.154.0.2' IDENTIFIED BY 'ukudox';
+mysqlimport -u dodosi -p --local kaberuka /var/www/tiba/kaberuka/kaberuka.sql
+source /var/www/tiba/kaberuka/kaberuka.sql
+
+Docker superset related
+git clone https://github.com/apache/superset.git
+docker-compose -f docker-compose-non-dev.yml pull
+docker-compose -f docker-compose-non-dev.yml up
+
+
+
+
+
