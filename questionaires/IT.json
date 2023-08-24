@@ -1,5 +1,5 @@
 {
- "title": "Chief Information Security Officer (CISO)",
+ "title": "Chief Information Technology (IT)",
  "description": "Testing Questions",
  "logoPosition": "right",
  "pages": [
@@ -8,7 +8,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "Should security be among the top priorities in IT spending for your organization?",
+     "name": "SecurityTopPriority",
+     "title": "Should security be among the top priorities in IT spending for your organization?",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -26,7 +27,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "What percentage of IT budget do you believe should be allocated to security measures in your organization? (Select only one)",
+     "name": "ITBudgetPercentageOnSecurity",
+     "title": "What percentage of IT budget do you believe should be allocated to security measures in your organization? (Select only one)",
      "isRequired": true,
      "choices": [
       "0-5%",
@@ -42,7 +44,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "If you agree (Q1), what are the main reasons for considering security investments as top priority in your organization? (Select all that apply))",
+     "name":"SecurityInvestmentsTopPriority",
+     "title": "If you agree (Q1), what are the main reasons for considering security investments as top priority in your organization? (Select all that apply))",
      "isRequired": true,
      "choices": [
       "Protection against cyber threats ",
@@ -62,7 +65,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "How important is the alignment of security investments with the overall business goals and objectives of your organization? (Select only one)",
+     "name":"AlignmentOfSecurityInvestments",
+     "title": "How important is the alignment of security investments with the overall business goals and objectives of your organization? (Select only one)",
      "isRequired": true,
      "choices": [
       "Not important ",
@@ -79,7 +83,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "How important is it for your organization to have a well-defined process for reviewing and updating finance or budget for security investments when it is required /on demand? (Select only one)",
+     "name": "ReviewingAndUpdatingFinance",
+     "title": "How important is it for your organization to have a well-defined process for reviewing and updating finance or budget for security investments when it is required /on demand? (Select only one)",
      "isRequired": true,
      "choices": [
       "Not important ",
@@ -96,7 +101,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "How would rate the relationship between the need for security investments with the need to remain financially competitive in your organization?",
+     "name":"SecurityInvestmentsAndFinance",
+     "title": "How would rate the relationship between the need for security investments with the need to remain financially competitive in your organization?",
      "isRequired": true,
      "choices": [
       "Very low",
@@ -113,7 +119,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "What challenges, if any, you believe does your organization face in driving security investments? (Select all that apply)",
+     "name":"DrivingSecurityInvestmentsChallenges",
+     "title": "What challenges, if any, you believe does your organization face in driving security investments? (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Limited budget or resources",
@@ -132,7 +139,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "How do you perceive the level of involvement and engagement of other departments in security investment decisions?",
+     "name":"InvolvementOfOtherDepartments",
+     "title": "How do you perceive the level of involvement and engagement of other departments in security investment decisions?",
      "isRequired": true,
      "choices": [
       "Very low",
@@ -149,7 +157,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "Are security features among the factors you have emphasized in marketing efforts?",
+     "name": "SecurityFeaturesOnTheMarket",
+     "title": "Are security features among the factors you have emphasized in marketing efforts?",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -167,7 +176,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "Do you feel that upper-level management prioritizes security investments as a strategic initiative for the organization?",
+     "name":"UpperLevelSecurityPriority",
+     "title": "Do you feel that upper-level management prioritizes security investments as a strategic initiative for the organization?",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -184,7 +194,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "What factors do you think influence the organization’s decision on how much to spend on security investments? (Select all that apply)",
+     "name":"DecisionsInSpendingOnSecurity",
+     "title": "What factors do you think influence the organization’s decision on how much to spend on security investments? (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Regulatory compliance and requirements",
@@ -204,7 +215,7 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "question1",
+     "name": "DepartmentsLevelOfInvolvement",
      "title": "How do you perceive the level of involvement and engagement of other departments in security investment decisions?",
      "isRequired": true,
      "choices": [
@@ -222,7 +233,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "To what extend your organization be willing to increase its investments for new technology adoption because of cyber security? (Select only one)",
+     "name":"IncreaseOfInvestmentsForCybersecurity",
+     "title": "To what extend your organization be willing to increase its investments for new technology adoption because of cyber security? (Select only one)",
      "isRequired": true,
      "choices": [
       "Willingly to significantly increase investments ",
@@ -238,7 +250,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "Do you think your organization’s decisions on security investments are informed by changes in the security market?",
+     "name":"ChangesSecurityMarketDecisions",
+     "title": "Do you think your organization’s decisions on security investments are informed by changes in the security market?",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -255,7 +268,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "What are the main reasons for considering the adoption of a new technology? (Select that all apply)",
+     "name": "AdoptionOfNewTechnology",
+     "title": "What are the main reasons for considering the adoption of a new technology? (Select that all apply)",
      "isRequired": true,
      "choices": [
       "Improved efficiency and productivity",
@@ -275,7 +289,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "How likely is your organization to prioritize cost savings over security when considering the purchase of less secure, but less expensive technology products?",
+     "name":"PriotizeCostSavingsOverSecurity",
+     "title": "How likely is your organization to prioritize cost savings over security when considering the purchase of less secure, but less expensive technology products?",
      "isRequired": true,
      "choices": [
       "Very low",
@@ -292,7 +307,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "How often do you think your organization view the potential benefits of adopting a more secure technology?",
+     "name":"BenefitsOfAdoptingSecureTechnology",
+     "title": "How often do you think your organization view the potential benefits of adopting a more secure technology?",
      "isRequired": true,
      "choices": [
       "Never",
@@ -308,7 +324,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "Would your organization be willing to adopt a more secure technology even if it may require addition budget allocation or upfront costs?",
+     "name":"AdditionalBudgetInAdoptingSecureTechnology",
+     "title": "Would your organization be willing to adopt a more secure technology even if it may require addition budget allocation or upfront costs?",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -326,7 +343,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "What key drivers for implementing a new secure technology in your organization?  (Select all that apply)",
+     "name":"ImplementationOfSecureTechnologyDrivers",
+     "title": "What key drivers for implementing a new secure technology in your organization?  (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Protecting sensitive data and information",
@@ -345,7 +363,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "How frequently has your organization experienced a security incident/s in your organization?",
+     "name": "SecurityIncidentsFrequency",
+     "title": "How frequently has your organization experienced a security incident/s in your organization?",
      "isRequired": true,
      "choices": [
       "Very frequently (multiple times per month)",
@@ -362,7 +381,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "If Yes to Q20, how would you rate the severity of the incident for your overall business objectives? (Select only one)",
+     "name":"SeverityOfSecurityIncident",
+     "title": "If Yes to Q20, how would you rate the severity of the incident for your overall business objectives? (Select only one)",
      "isRequired": true,
      "choices": [
       "Very severe, causing significant disruptions and losses",
@@ -380,7 +400,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "If yes to Q20, how long did you take to recover from a security incident/s? (Select only one)",
+     "name":"TimeRequiredToRecoverSecurityIncident",
+     "title": "If yes to Q20, how long did you take to recover from a security incident/s? (Select only one)",
      "isRequired": true,
      "choices": [
       "Less than a day",
@@ -398,7 +419,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "Which of the following types of security incidents have you experienced in your organization? (Select all that apply)",
+     "name":"TypesOfSecurityIncidents",
+     "title": "Which of the following types of security incidents have you experienced in your organization? (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Data breaches",
@@ -419,7 +441,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "Please indicate which types of vulnerabilities you believe might have been faced by your organization or the cause of security incident (Select all that apply)",
+     "name":"TypesOfVulnerabilities",
+     "title": "Please indicate which types of vulnerabilities you believe might have been faced by your organization or the cause of security incident (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Buffer overflow",
@@ -442,7 +465,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "Which systems or devices within your organization you believe were affected by the security vulnerabilities? (Select all that apply)",
+     "name":"ImpactOfSecurityVulnerabilities",
+     "title": "Which systems or devices within your organization you believe were affected by the security vulnerabilities? (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Servers",
@@ -466,7 +490,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "Which of the following factors do you believe contributed to the security incident in your organization (Select all that apply)",
+     "name":"FactorsToSecurityIncident",
+     "title": "Which of the following factors do you believe contributed to the security incident in your organization (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Lack of budget or resources for security measures",
@@ -489,7 +514,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "How much importance does your organization now place on cyber security in its budget and financial planning dues to previous security incidents or breaches?",
+     "name":"PastSecurityIncidentsExperienceOnFinancialPlanning",
+     "title": "How much importance does your organization now place on cyber security in its budget and financial planning dues to previous security incidents or breaches?",
      "isRequired": true,
      "choices": [
       "Very low",
@@ -510,7 +536,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "To what extent past security incidents or breaches shaped the direction and priorities of your organization security strategy?",
+     "name":"PastSecurityIncidentsExperienceOnSecurityStrategy",
+     "title": "To what extent past security incidents or breaches shaped the direction and priorities of your organization security strategy?",
      "isRequired": true,
      "choices": [
       "Very low",
@@ -527,7 +554,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "Do you perceive the importance of security assurance from vendors in your organization procurement process for new products or hardware devices?",
+     "name":"SecurityAssuranceFromVendors",
+     "title": "Do you perceive the importance of security assurance from vendors in your organization procurement process for new products or hardware devices?",
      "isRequired": true,
      "choices": [
       "Very low",
@@ -544,7 +572,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "My organization has processes in place for ongoing monitoring and management of security for the deployed hardware devices",
+     "name":"MonitoringSecurityOfDeployedDevices",
+     "title": "My organization has processes in place for ongoing monitoring and management of security for the deployed hardware devices",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -563,7 +592,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "Do you think your currently deployed hardware devices are protected from security breaches or security vulnerabilities?",
+     "name":"DeployedHardwareSecurityVulnerabilities",
+     "title": "Do you think your currently deployed hardware devices are protected from security breaches or security vulnerabilities?",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -581,7 +611,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "With your current technology and digital estate, do you think your organization is protected from the likelihood of security incidents or breaches because of hardware vulnerability exploitation?",
+     "name":"DigitalEstateSecurity",
+     "title": "With your current technology and digital estate, do you think your organization is protected from the likelihood of security incidents or breaches because of hardware vulnerability exploitation?",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -599,7 +630,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "Do you think your organization would be implementing a more secure technology, which guarantee significant vulnerability mitigations and reduction of financial losses due to security breaches?",
+     "name":"ImplementingMoreSecureTechnology",
+     "title": "Do you think your organization would be implementing a more secure technology, which guarantee significant vulnerability mitigations and reduction of financial losses due to security breaches?",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -617,7 +649,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "What are the key challenges or barriers that you organization would face in adopting a more secure technology (Select all that apply)",
+     "name":"BarriersInAdoptingSecureTechnology",
+     "title": "What are the key challenges or barriers that you organization would face in adopting a more secure technology (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Budget constraints",
@@ -637,7 +670,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "How familiar is you with the concept of Digital Security by Design, which promotes secure-by-design principles in technology development? (Select only one)",
+     "name":"FamiliarityWithDigitalSecurityByDesign",
+     "title": "How familiar is you with the concept of Digital Security by Design, which promotes secure-by-design principles in technology development? (Select only one)",
      "isRequired": true,
      "choices": [
       "Very familiar with it",
@@ -652,7 +686,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "Would your organization prioritize a secure by design technology and ready for further investment, if it would significantly mitigate security vulnerabilities?",
+     "name":"PrioritizingSecureByDesignTechnology",
+     "title": "Would your organization prioritize a secure by design technology and ready for further investment, if it would significantly mitigate security vulnerabilities?",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -670,7 +705,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "What are the key factors that your organization would need to consider when adopting a Digital Security by Design technology solution? (Select all that apply)",
+     "name":"FactorsInAdoptingDigitalSecurityByDesign",
+     "title": "What are the key factors that your organization would need to consider when adopting a Digital Security by Design technology solution? (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Robustness and effectiveness of security measures",
@@ -691,7 +727,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "Would you be willing to incentivize into development of products that are secure by design principle? (Select all that apply)",
+     "name":"IncentivesForSecureByDesignPrinciple",
+     "title": "Would you be willing to incentivize into development of products that are secure by design principle? (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Funding or grants for research and development",
@@ -710,7 +747,8 @@
    "elements": [
     {
      "type": "radiogroup",
-     "name": "Do you think your organization would like to incentivize the adoption of a secure by design technology?",
+     "name":"IncentivesInTheAdoptionOfDSbD",
+     "title": "Do you think your organization would like to incentivize the adoption of a secure by design technology?",
      "isRequired": true,
      "choices": [
       "Strongly disagree",
@@ -728,7 +766,8 @@
    "elements": [
     {
      "type": "checkbox",
-     "name": "What factors do you see as obstacles that you may consider when it would require migrating from your current technology to a more secure by design technology? (Select all that apply)",
+     "name":"ObstaclesMigratingToDSbD",
+     "title": "What factors do you see as obstacles that you may consider when it would require migrating from your current technology to a more secure by design technology? (Select all that apply)",
      "isRequired": true,
      "choices": [
       "Cost or budget",
