@@ -47,8 +47,8 @@ if (isset($_SESSION['position'])) {
                         echo "<td>{$row['username']}</td>";
                         echo "<td>{$row['position']}</td>";
                         echo "<td>
-                                <a href='edit.php?id={$row['username']}' class='btn btn-primary btn-sm'>Edit</a>
-                                <a href='delete.php?id={$row['username']}' class='btn btn-danger btn-sm'>Delete</a>
+                                <a href='edit.php?username={$row['username']}' class='btn btn-primary btn-sm'>Edit</a>
+                                <a href='delete.php?username={$row['username']}' class='btn btn-danger btn-sm'>Delete</a>
                               </td>";
                         echo "</tr>";
                     }

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Survey</title>
+    <title>Self Assessment Tool</title>
     <meta charset="utf-8">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -19,7 +19,27 @@
     <script type="text/javascript" src="js/index.js"></script>
 </head>
 <body>
-  <a href="" style="color: blue; text-decoration: underline; text-align: right;">Go To Dashboard</a>
+  <a href="http://162.240.104.198:8088/" style="color: blue; text-decoration: underline; text-align: right;">Go To Dashboard</a>
+  |&nbsp<a href="logout.php" id="logoutLink" style="color: blue; text-decoration: underline; text-align: right;">Logout</a>
   <div id="surveyContainer"></div>
-  </body>
+  
+  <script>
+    function logout() {
+        
+            sessionStorage.removeItem("position");
+            sessionStorage.removeItem("username");
+            sessionStorage.removeItem("questionare");
+            sessionStorage.clear();
+            window.location="login.php";
+    }
+
+    $(document).ready(function() {
+        $("#logoutLink").click(function(event) {
+            event.preventDefault();
+            logout();
+        });
+    });
+    </script>
+</body>
+
 </html>

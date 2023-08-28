@@ -16,7 +16,7 @@ if (isset($_SESSION['position'])) {
     <title>User Registration Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/resistration.js"></script></head>
+    <script src="js/edit.js"></script></head>
   
 <body>
     <div class="container">
@@ -52,7 +52,6 @@ if (isset($_SESSION['position'])) {
                             <option value="CFO">CFO</option>
                             <option value="CISO">CISO</option>
                             <option value="IT">IT</option>
-                            <option value="PO">PO</option>
                         </select>
                     </div>
                     <div class="d-grid">
