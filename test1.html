@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Survey Creator Example</title>
+    <!-- Include SurveyJS and Survey Creator libraries and styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/survey-knockout/survey.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/survey-creator/survey-creator.min.css">
+</head>
+<body>
+    <!-- Container for the Survey Creator -->
+    <div id="creatorElement"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/survey-knockout/survey.ko.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/survey-creator/survey-creator.min.js"></script>
+
+    <script>
+        // Initialize the Survey Creator
+        var creatorOptions = {
+            showEmbededSurveyTab: true, // Show a tab for previewing the survey
+        };
+        var creator = new SurveyCreator.SurveyCreator("creatorElement", creatorOptions);
+
+        // Optionally load an existing survey configuration
+        var existingSurveyJSON = {
+            pages: [
+                {
+                    name: "page1",
+                    elements: [
+                        {
+                            type: "radiogroup",
+                            name: "question1",
+                            title: "Sample Question",
+                            choices: ["Option 1", "Option 2", "Option 3"]
+                        }
+                    ]
+                }
+            ]
+        };
+        creator.JSON = existingSurveyJSON;
+
+        // Render the Survey Creator
+        creator.render();
+    </script>
+</body>
+</html>

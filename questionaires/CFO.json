@@ -9,7 +9,8 @@
     {
      "type": "radiogroup",
      "name":  "SecurityTopPriority",
-     "title": "Should security be among the top priorities in IT spending for your organization?",
+     "title": "Should security be among the top priorities in IT spending for your organization?|| Ni hatari",
+     "description": "This information will be used for identification purposes.",
      "isRequired": true,
      "choices": [
       "Strong disagree",

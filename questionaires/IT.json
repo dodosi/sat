@@ -46,7 +46,8 @@
      "type": "checkbox",
      "name":"SecurityInvestmentsTopPriority",
      "title": "If you agree (Q1), what are the main reasons for considering security investments as top priority in your organization? (Select all that apply))",
-     "isRequired": true,
+     "description": "This information will be used for identification purposes.",
+	 "isRequired": true,
      "choices": [
       "Protection against cyber threats ",
       "Compliance with regulations and standards",

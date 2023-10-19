@@ -3,26 +3,22 @@
 <head>
     <title>Self Assessment Tool</title>
     <meta charset="utf-8">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- Default V2 theme -->
-    <link href="https://unpkg.com/survey-jquery/defaultV2.min.css" type="text/css" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
-
-    <!-- Modern theme -->
-    <!-- <link href="https://unpkg.com/survey-jquery/modern.min.css" type="text/css" rel="stylesheet"> -->
-
-   <script src="https://unpkg.com/jquery"></script>
-
-<link href="https://unpkg.com/survey-jquery@1.9.81/defaultV2.css" type="text/css" rel="stylesheet"/>
-<script src="https://unpkg.com/survey-jquery@1.9.81/survey.jquery.min.js"></script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <script src="https://unpkg.com/jquery/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/survey-jquery@1.9.109/survey.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/survey-jquery@1.9.109/defaultV2.min.css" />
+    <!-- <link href="https://unpkg.com/survey-jquery@1.9.107/defaultV2.css" type="text/css" rel="stylesheet"/>
+    <script src="https://unpkg.com/survey-jquery@1.9.107/survey.jquery.min.js"></script> -->
+    <!--  
+    <link href="https://unpkg.com/survey-jquery@1.9.81/defaultV2.css" type="text/css" rel="stylesheet"/>
+    <script src="https://unpkg.com/survey-jquery@1.9.81/survey.jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
 </head>
 <body>
   <a href="http://162.240.104.198:8088/" style="color: blue; text-decoration: underline; text-align: right;">Go To Dashboard</a>
   |&nbsp<a href="logout.php" id="logoutLink" style="color: blue; text-decoration: underline; text-align: right;">Logout</a>
   <div id="surveyContainer"></div>
-  
+  <div id="surveyElement"></div>
   <script>
     function logout() {
         
@@ -41,5 +37,6 @@
     });
     </script>
 </body>
-
+<script src="./js/json.js"></script>
+<script src="./js/theme.js"></script>
 </html>

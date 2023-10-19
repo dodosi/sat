@@ -23,6 +23,7 @@ $(document).ready(function() {
                 // //$('#result').text(response);
                 localStorage.setItem('username',username);
                 localStorage.setItem('position',position);
+                localStorage.setItem('group',position);
                 localStorage.setItem('questionaire',position+'.json');
                 // // Redirect to another page
                 if(position==='ADMIN'){

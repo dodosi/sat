@@ -73,9 +73,7 @@ async function processData() {
     console.log('Fetched data:', data);
 	const survey = new Survey.Model(data);
 	survey.onComplete.add(alertResults);
-    $("#surveyContainer").Survey({ model: survey });
-	
-    // Continue with other operations using the fetched data
+   $("#surveyContainer").Survey({ model: survey });
   } catch (error) {
     // Handle any errors
   }
