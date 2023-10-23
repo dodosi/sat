@@ -42,28 +42,28 @@ Type<br>
 <tr><td>
 Required<br>
 <td/>
-<input type="text" name="is_required" required="required" class="form-control" value="<?php if(isset($_GET['row_counter'])){echo $_GET['row_counter'];}?>"><br>
+<input type="text" name="is_required" required="required" class="form-control" value="<?php if(isset($_GET['is_required'])){echo $_GET['is_required'];}?>"><br>
 </td></tr>
 
 <tr><td>
 Flag<br>
 <td/>
-<input type="text" name="flag" required="required" class="form-control" value="<?php if(isset($_GET['row_counter'])){echo $_GET['row_counter'];}?>"><br>
+<input type="text" name="flag" required="required" class="form-control" value="<?php if(isset($_GET['flag'])){echo $_GET['flag'];}?>"><br>
 </td></tr>
 <tr><td>
 Description<br>
 <td/>
-<input type="text" name="description" required="required" class="form-control" value="<?php if(isset($_GET['row_counter'])){echo $_GET['row_counter'];}?>"><br>
+<input type="text" name="description" required="required" class="form-control" value="<?php if(isset($_GET['description'])){echo $_GET['description'];}?>"><br>
 </td></tr>
 <tr><td>
 Group<br>
 <td/>
-<input type="text" name="groupe" required="required" class="form-control" value="<?php if(isset($_GET['row_counter'])){echo $_GET['row_counter'];}?>"><br>
+<input type="text" name="groupe" required="required" class="form-control" value="<?php if(isset($_GET['groupe'])){echo $_GET['groupe'];}?>"><br>
 </td></tr>
 <tr><td>
 Category<br>
 <td/>
-<input type="text" name="category" required="required" class="form-control" value="<?php if(isset($_GET['row_counter'])){echo $_GET['row_counter'];}?>"><br>
+<input type="text" name="category" required="required" class="form-control" value="<?php if(isset($_GET['category'])){echo $_GET['category'];}?>"><br>
 </td></tr>
 
 <tr><td>
