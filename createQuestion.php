@@ -22,170 +22,160 @@
 <body>
 <div class="container">
     <?php
-    include 'menu.html';
+       include 'menu.html';
     ?>
     <h2 align ="center"> Create Question</h2>
     <table border ="0" align="center">
-
-<form action="createQuestion.php" method="POST">
-  
-    <tr>
-      <td>Question Id:</td>
-      <td><input type="text" name="name" required="required" class="form-control"><br></td>
-    </tr>
-    <tr>
-      <td>Title:</td>
-      <td><input type="text" name="title" required="required" class="form-control"><br></td>
-    </tr>
-    <tr>
-      <td>Type:</td>
-      <td>
-        <select name="type" required="required" class="form-control" onchange="toggleInputVisibility()">
-          <option value="radiogroup">Radiogroup</option>
-          <option value="checkbox">Checkbox</option>
-          <option value="text">Text</option>
-          <option value="ranking">Ranking</option>
-          <option value="boolean">Boolean</option>
-          <option value="dropdown">Dropdown</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Required:</td>
-      <td>
-        <select name="is_required" required="required" class="form-control">
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Flag:</td>
-      <td><input type="text" name="flag" required="required" class="form-control"><br></td>
-    </tr>
-    <tr>
-      <td>Description:</td>
-      <td><input type="text" name="description" required="required" class="form-control"><br></td>
-    </tr>
-    <tr>
-      <td>Group:</td>
-      <td>
-        <select name="groupe" required="required" class="form-control" onchange="toggleInputVisibility()">
-          <option value="CEO">CEO</option>
-          <option value="CFO">CFO</option>
-          <option value="CISO">CISO</option>
-          <option value="IT">IT</option>
-       </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Category:</td>
-      <td><input type="text" name="category" required="required" class="form-control"><br></td>
-    </tr>
-    <tr>
-      <td>Visible If:</td>
-      <td>
-        <label for="input1">Depends on(Question id):</label>
-        <input type="text" id="input1" name="visible" placeholder="Depends on">
-        <br><br>
-        <label for="input2">If Answer is:</label>
-        <input type="text" id="input2" name="visibleMessage" placeholder="Choice">
-      </td>
-    </tr>
-    <tr>
-      <td>Has Other options:</td>
-      <td>
-        <select name="show_other" required="required" class="form-control" id="showOtherSelect">
-          <option value="true">True</option>
-          <option value="false">False</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td></td>
-      <td></br>
-        <input type="SUBMIT" name="send" value="send" required="required" class="btn btn-success"><br>
-      </td>
-    </tr>
-</form>
-
-<script>
-  function toggleInputVisibility() {
-    var typeSelect = document.querySelector('select[name="type"]');
-    var showOtherSelect = document.querySelector('#showOtherSelect');
-
-    if ((typeSelect.value === 'text')||(typeSelect.value === 'boolean')) {
-      showOtherSelect.value = 'false';
-      showOtherSelect.disabled = true;
-    } else {
-      showOtherSelect.disabled = false;
-    }
-  }
-</script>
-
-
+    <form action="createQuestion.php" method="POST">
+      
+        <tr>
+          <td>Question Id:</td>
+          <td><input type="text" name="name" required="required" class="form-control"><br></td>
+        </tr>
+        <tr>
+          <td>Title:</td>
+          <td>
+          <textarea name="title" required="required" class="form-control" rows="4" cols="50">
+          </textarea>
+          </td>
+        </tr>
+        <tr>
+        <td>Choices</td>
+        <td>
+        <input type="text" name="choices" required="required" class="form-control"><br>
+        </td>
+        </tr>
+        <tr>
+          <td>Type:</td>
+          <td>
+            <select name="type" required="required" class="form-control" onchange="toggleInputVisibility()">
+              <option value="radiogroup">Radiogroup</option>
+              <option value="checkbox">Checkbox</option>
+              <option value="text">Text</option>
+              <option value="ranking">Ranking</option>
+              <option value="boolean">Boolean</option>
+              <option value="dropdown">Dropdown</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Required:</td>
+          <td>
+            <select name="is_required" required="required" class="form-control">
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Flag:</td>
+          <td><input type="text" name="flag" required="required" class="form-control"><br></td>
+        </tr>
+        <tr>
+          <td>Description:</td>
+          <td>
+          <textarea name="description" required="required" class="form-control" rows="4" cols="50">
+          </textarea></td>
+        </tr>
+        <tr>
+          <td>Group:</td>
+          <td>
+            <select name="groupe" required="required" class="form-control" onchange="toggleInputVisibility()">
+              <option value="CEO">CEO</option>
+              <option value="CFO">CFO</option>
+              <option value="CPO">CPO</option>
+              <option value="CISO">CISO</option>
+              <option value="CIO">CIO</option>
+              <option value="CTO">CTO</option>
+          </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Category:</td>
+          <td><input type="text" name="category" required="required" class="form-control"><br></td>
+        </tr>
+        <tr>
+          <td>Visible If:</td>
+          <td>
+            <label for="input1">Depends on(Question id):</label>
+            <input type="text" id="input1" name="visible" placeholder="Depends on">
+            <br><br>
+            <label for="input2">If Answer is:</label>
+            <input type="text" id="input2" name="visibleMessage" placeholder="Choice">
+          </td>
+        </tr>
+        <tr>
+          <td>Has Other options:</td>
+          <td>
+            <select name="show_other" required="required" class="form-control" id="showOtherSelect">
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></br>
+            <input type="SUBMIT" name="send" value="send" required="required" class="btn btn-success"><br>
+          </td>
+        </tr>
+    </form>
+<tr><td>
 <?php
-if(isset($_REQUEST['send'])){
+  if(isset($_REQUEST['send'])){
+    $name=$_POST['name'];
+    $title=$_POST['title'];
+    $type=$_POST['type'];
+    $is_required=$_POST['is_required'];
+    $flag=$_POST['flag'];
+    $description=$_POST['description'];
+    $groupe=$_POST['groupe'];
+    $category=$_POST['category'];
+    $visible = $_POST['visible'];
+    $visibleMessage = $_POST['visibleMessage'];
+    $show_other = $_POST['show_other'];
+    $choices=$_POST['choices'];
+    $visibility = '{' . $visible . '} = \'' . $visibleMessage . '\'';
 
- $name=$_POST['name'];
- $title=$_POST['title'];
- $type=$_POST['type'];
- $is_required=$_POST['is_required'];
- $flag=$_POST['flag'];
- $description=$_POST['description'];
- $groupe=$_POST['groupe'];
- $category=$_POST['category'];
+    $visibility1 = addslashes($visibility);
+    include 'connect.php';
+    $querry="INSERT INTO `question`(`name`, `title`, `type`,`is_required`,`flag`,`description`,`groupe`,`category`,`visible_if`,`show_other`) 
+                          VALUES ('$name','$title','$type','$is_required','$flag','$description','$groupe','$category','$visibility1','$show_other')";
+    $choicesQuery="INSERT INTO `choice`( `question_name`, `choice_name`) 
+                                VALUES ('$name','$choices')";
 
- $visible = $_POST['visible'];
- $visibleMessage = $_POST['visibleMessage'];
- $show_other = $_POST['show_other'];
- 
- $visibility = '{' . $visible . '} = \'' . $visibleMessage . '\'';
-
-$visibility1 = addslashes($visibility);
-include 'connect.php';
-$querry="INSERT INTO `question`(`name`, `title`, `type`,`is_required`,`flag`,`description`,`groupe`,`category`,`visible_if`,`show_other`) 
-                      VALUES ('$name','$title','$type','$is_required','$flag','$description','$groupe','$category','$visibility1','$show_other')";
-$result=$conn->query($querry);
-if(!$result){
-echo  mysqli_error($conn);
-    exit;
-}
-else{
-    if(($type == "text")||($type == "boolean")){
-        $querry="INSERT INTO `choice`( `question_name`) 
-        VALUES ('$name')";
-        $result=$conn->query($querry);
-        if(!$result){
-        echo  mysqli_error($conn);
-            exit;
-        }
-        else{
-        echo "Querry run successifully";
-        }
+    $result=$conn->query($querry);
+    if($result){
+          $result2=$conn->query($choicesQuery);
+          if($result2){
+            echo "Querry run successifully";
+          }else{
+            echo  mysqli_error($conn);  
+          }
     }else{
-
-        $encodedName = urlencode($name);
-       // echo '<a href="addChoices.php?name=' . $encodedName . '">&nbspCreate choices</a><br>';
-        header("Location:addChoices.php?name=" . $encodedName);
-        exit;
-        
-        
+      echo  mysqli_error($conn); 
     }
-
-}
-
     mysqli_close($conn);
-}
-?>
+  }
+  ?>
+  </td></tr>
 </div>
 <div id="footer">
 
 </div>
 </div>
+<script>
+      function toggleInputVisibility() {
+        var typeSelect = document.querySelector('select[name="type"]');
+        var showOtherSelect = document.querySelector('#showOtherSelect');
+
+        if ((typeSelect.value === 'text')||(typeSelect.value === 'boolean')) {
+          showOtherSelect.value = 'false';
+          showOtherSelect.disabled = true;
+        } else {
+          showOtherSelect.disabled = false;
+        }
+      }
+    </script>
 </body>
 </html>
-
-<?php
-
-?>

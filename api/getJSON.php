@@ -23,7 +23,7 @@ function isStringNotEmpty($inputString) {
 
 $group=$_GET['group'];
 //$group= "CISO";
-$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name ,question.visible_if, question.is_required , question.show_other" . " FROM question, choice " . " WHERE choice.question_name = question.name and question.groupe='$group'";
+$querry = "SELECT question.row_counter, question.name,question.description, question.title, question.type, choice.question_name, choice.choice_name ,question.visible_if, question.is_required , question.show_other" . " FROM question, choice " . " WHERE choice.question_name = question.name and question.groupe='$group'";
 
 $result = $connect->query($querry);
 
@@ -42,6 +42,8 @@ if ($result) {
         $nameCounter ++;
         $type = $query_row['type'];
         $name = $query_row['name'];
+        $title = $query_row['title'];
+        $description = $query_row['description'];
         $show_other = $query_row['show_other'];
         $visible_if = $query_row['visible_if'];
         $is_required = $query_row['is_required'];
@@ -69,8 +71,9 @@ if ($result) {
 
         $currentElements[] = array(
             "type" => $type,
-            "name" => $questionName,
-            "title" => $name,
+            "name" => $name,
+            "title" => $title,
+            "description" => $description,
             "isRequired" => isStringNotEmpty($is_required),
             "visibleIf"=> isStringNotEmpty($visible_if),
             //"showOtherItem" => false
@@ -100,8 +103,9 @@ if ($result) {
 
         $currentElements[] = array(
             "type" => $type,
-            "name" => $questionName,
-            "title" => $name,
+            "name" => $name,
+            "title" => $title,
+            "description" => $description,
             "isRequired" => isStringNotEmpty($is_required),
             "visibleIf"=> isStringNotEmpty($visible_if),
             "showOtherItem" => isStringNotEmpty( $show_other ) ,
