@@ -40,8 +40,8 @@ if ($result) {
     $nameCounter=0;  
     while ($query_row = $result->fetch_assoc()) {
         $nameCounter ++;
-        $name = $query_row['name'];
         $type = $query_row['type'];
+        $name = $query_row['name'];
         $show_other = $query_row['show_other'];
         $visible_if = $query_row['visible_if'];
         $is_required = $query_row['is_required'];

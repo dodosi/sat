@@ -42,7 +42,7 @@
       <td>
         <select name="type" required="required" class="form-control" onchange="toggleInputVisibility()">
           <option value="radiogroup">Radiogroup</option>
-          <option value="checkbox">Checkbox 2</option>
+          <option value="checkbox">Checkbox</option>
           <option value="text">Text</option>
           <option value="ranking">Ranking</option>
           <option value="boolean">Boolean</option>
@@ -71,7 +71,7 @@
       <td>Group:</td>
       <td>
         <select name="groupe" required="required" class="form-control" onchange="toggleInputVisibility()">
-          <option value="CFE">CEO</option>
+          <option value="CEO">CEO</option>
           <option value="CFO">CFO</option>
           <option value="CISO">CISO</option>
           <option value="IT">IT</option>
