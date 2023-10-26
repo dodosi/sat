@@ -6,16 +6,16 @@ if(isset($_GET['name'])){
 $name=$_GET['name'];
 }
 $querry=" DELETE FROM `choice` WHERE   `question_name`='$name'";
-$result=$conn->query($querry);
+$result=$connect->query($querry);
 if(!$result){
 echo  mysqli_error($conn);
     exit;
 }else{
 
 $querry=" DELETE FROM `question` WHERE   `name`='$name'";
-$result=$conn->query($querry);
+$result=$connect->query($querry);
 if(!$result){
-echo  mysqli_error($conn);
+echo  mysqli_error($connect);
     exit;
 }else{
 echo "Successifuly ";
@@ -26,5 +26,5 @@ header( 'Location:questionsAndChoices.php' ) ;
 }
 
 }
-mysqli_close($conn);
+mysqli_close($connect);
 ?>

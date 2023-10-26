@@ -146,16 +146,16 @@
 
     $result=$conn->query($querry);
     if($result){
-          $result2=$conn->query($choicesQuery);
+          $result2=$connect->query($choicesQuery);
           if($result2){
             echo "Querry run successifully";
           }else{
-            echo  mysqli_error($conn);  
+            echo  mysqli_error($connect);  
           }
     }else{
-      echo  mysqli_error($conn); 
+      echo  mysqli_error($connect); 
     }
-    mysqli_close($conn);
+    mysqli_close($connect);
   }
   ?>
   </td></tr>
