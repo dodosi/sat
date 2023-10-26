@@ -5,7 +5,7 @@ if($group=='ADMIN'){
     $querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name " . " FROM question, choice " . " WHERE choice.question_name = question.name and groupe='$group'";
 }
 $querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name, question.is_required, question.flag, question.description ,question.groupe,question.category" . " FROM question, choice" . " WHERE choice.question_name = question.name";
-$result = $conn->query($querry);
+$result = $connect->query($querry);
 
 $output = array('data' => array());
 
@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
     }
 }
 
-$conn->close();
+$connect->close();
 
 echo json_encode($output);
 ?>

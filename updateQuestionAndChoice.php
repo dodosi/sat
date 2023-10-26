@@ -75,9 +75,7 @@ Choices<br>
 <tr><td>
 <input type="SUBMIT" name="send" value="send"required="required" class="btn btn-success"><br>
 </td></tr>
-</table>
 </form>
-
 <?php
 if(isset($_REQUEST['send'])){
  $row_counter=$_POST['row_counter'];
@@ -94,40 +92,34 @@ if(isset($_REQUEST['send'])){
 include 'connect.php';
 $querry="UPDATE `question` SET `title`='$title',`type`='$type',`is_required`='$is_required',`flag`='$flag',`description`='$description',`groupe`='$groupe',`category`='$category' WHERE row_counter='$row_counter'";
 
-$result=$conn->query($querry);
+$result=$connect->query($querry);
 if(!$result){
-echo  mysqli_error($conn);
+echo  mysqli_error($connect);
     exit;
 }
 else{
 // echo "Querry run successifully";
 // echo '<a href='."addChoices.php?name=$name".'>'.'&nbspCreate choices'.'</a><br>';
-
-
 $querry="UPDATE `choice` SET `choice_name`='$choice_name'WHERE question_name='$name'";
 
-$result=$conn->query($querry);
+$result=$connect->query($querry);
 if(!$result){
-echo  mysqli_error($conn);
+echo  mysqli_error($connect);
     exit;
 }
 else{
-echo "Querry run successifully";
+echo "<tr><td>Updated!!<td></tr>";
 // echo '<a href='."addChoices.php?name=$name".'>'.'&nbspCreate choices'.'</a><br>';
 
 }
-
-    //mysqli_close($conn);
-
-
+//mysqli_close($conn);
 }
-
-    mysqli_close($conn);
+    mysqli_close($connect);
 }
 ?>
-<?php
 
-?>
+</table>
+
 </div>
 <div id="footer">
 
