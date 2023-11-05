@@ -6,7 +6,7 @@ $response='FAILED';
 
 if($_POST) {	
 	$username = addslashes($_POST['username']);
-	$sql="DELETE FROM USERS WHERE `username`='$username'";
+	$sql="DELETE FROM users WHERE `username`='$username'";
 
 		if($connect->query($sql) === TRUE) {
 		$response='ok';
