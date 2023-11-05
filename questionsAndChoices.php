@@ -6,7 +6,7 @@
 <title>Questions</title>
 
 <head>
-<meta charset="utf-8">
+    <meta charset="utf-8">
 	<title>Questions</title>
 
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
@@ -26,26 +26,25 @@
 
     
 </head>
-<div class="container">
-    <?php
-    include 'menu.html';
-    ?>
-    <table id="example" class="display" style="width:100%">
-        <thead>
-            <tr>
-                <th>NO</th>
-                <th>Question Name</th>
-                <th>Title</th>
-                <th>Type</th>
-                <th>Question Name</th>
-                <th>Choices</th>
-                <th>Action</th>
-               
-            </tr>
-        </thead>
-    </table>
-      
-</div>
+<body>
+    
+        <?php
+            include 'menu.html';
+        ?>
+        <table id="example" class="display" style="width:100%">
+            <thead>
+                <tr>
+                    <th>NO</th>
+                    <th>Question Name</th>
+                    <th>Title</th>
+                    <th>Type</th>
+                    <th>Question Name</th>
+                    <th>Choices</th>
+                    <th>Action</th>
+                
+                </tr>
+            </thead>
+        </table>   
     <script type="text/javascript">
         
             $(document).ready(function () {
@@ -64,29 +63,6 @@
 
     
     </script>
-    <script type="text/javascript">
-        
-
-    function showData(data){
-        alert(data);
-    }
-</script>
-
-<div id="footer">
-
-</div>
-<html>
-<head>
-    <title> </title>
-    
-</head>
-<div id="body-container">
-
-           
-
-</div>
-
-</html>
 </body> 
 </html>
 

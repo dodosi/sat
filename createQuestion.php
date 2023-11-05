@@ -42,7 +42,8 @@
         <tr>
         <td>Choices</td>
         <td>
-        <input type="text" name="choices" required="required" class="form-control"><br>
+        <textarea name="choices" required="required" class="form-control" rows="4" cols="50" placeholder="Enter choices">
+        </textarea><br>
         </td>
         </tr>
         <tr>
@@ -122,19 +123,28 @@
     </form>
 <tr><td>
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
   if(isset($_REQUEST['send'])){
-    $name=$_POST['name'];
-    $title=$_POST['title'];
-    $type=$_POST['type'];
-    $is_required=$_POST['is_required'];
-    $flag=$_POST['flag'];
-    $description=$_POST['description'];
-    $groupe=$_POST['groupe'];
-    $category=$_POST['category'];
-    $visible = $_POST['visible'];
-    $visibleMessage = $_POST['visibleMessage'];
-    $show_other = $_POST['show_other'];
-    $choices=$_POST['choices'];
+    $name=addslashes($_POST['name']);
+    $title=addslashes($_POST['title']);
+    $type=addslashes($_POST['type']);
+    $is_required=addslashes($_POST['is_required']);
+    $flag=addslashes($_POST['flag']);
+    $description=addslashes($_POST['description']);
+    $groupe=addslashes($_POST['groupe']);
+    $category=addslashes($_POST['category']);
+    $visible = addslashes($_POST['visible']);
+    $visibleMessage = addslashes($_POST['visibleMessage']);
+    $show_other = '';
+    $choices='';
+    if(isset($_POST['show_other'])){
+      $show_other= addslashes($_POST['show_other']);
+    }
+    if(isset($_POST['choices'])){
+      $choices=addslashes($_POST['choices']);
+    }
     $visibility = '{' . $visible . '} = \'' . $visibleMessage . '\'';
 
     $visibility1 = addslashes($visibility);
@@ -144,17 +154,21 @@
     $choicesQuery="INSERT INTO `choice`( `question_name`, `choice_name`) 
                                 VALUES ('$name','$choices')";
 
-    $result=$conn->query($querry);
+    $result=$connect->query($querry);
+    $message='Failed';
     if($result){
+        
           $result2=$connect->query($choicesQuery);
           if($result2){
-            echo "Querry run successifully";
+            $message= "Querry run successifully";
           }else{
             echo  mysqli_error($connect);  
           }
+      
     }else{
       echo  mysqli_error($connect); 
     }
+    echo $message;
     mysqli_close($connect);
   }
   ?>
