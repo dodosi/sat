@@ -76,8 +76,12 @@ Description<br>
 <tr><td>
 Group<br>
 </td><td>
-<input type="text" name="groupe" required="required" class="form-control" value="<?php if(isset($_GET['groupe'])){echo $_GET['groupe'];}?>"><br>
-</td></tr>
+          <label><input type="checkbox" name="selectedOptions[]" value="CEO">CEO</label><br>
+          <label><input type="checkbox" name="selectedOptions[]" value="CFO">CFO</label><br>
+          <label><input type="checkbox" name="selectedOptions[]" value="CPO">CPO</label><br>
+          <label><input type="checkbox" name="selectedOptions[]" value="CISO">CISO</label><br>
+          <label><input type="checkbox" name="selectedOptions[]" value="CIO">CIO</label><br>
+          <label><input type="checkbox" name="selectedOptions[]" value="CTO">CTO</label><br></td></tr>
 <tr><td>
 Category<br>
 </td><td>
@@ -117,13 +121,15 @@ Category<br>
         $is_required=addslashes($_POST['is_required']);
         $flag=addslashes($_POST['flag']);
         $description=addslashes($_POST['description']);
-        $groupe=addslashes($_POST['groupe']);
+        //$groupe=addslashes($_POST['groupe']);
         $category=addslashes($_POST['category']);
         $choice_name=addslashes($_POST['choice_name']);
         $visible = addslashes($_POST['visible']);
         $visibleMessage =addslashes($_POST['visibleMessage']);
         $show_other = '';
         $choices='';
+        $selectedOptions = $_POST['selectedOptions'];
+        $groupe=implode(',', $selectedOptions);
         if(isset($_POST['show_other'])){
              $show_other= addslashes($_POST['show_other']);
         }

@@ -40,6 +40,8 @@
                     <th>Type</th>
                     <th>Question Name</th>
                     <th>Choices</th>
+                    <th>Group</th>
+                    <th>Flag</th>
                     <th>Action</th>
                 
                 </tr>

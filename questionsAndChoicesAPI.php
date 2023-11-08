@@ -2,10 +2,11 @@
 include 'connect.php';
 $group=$_GET['group'];
 //$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name, question.is_required, question.flag, question.description ,question.groupe,question.category,question.visible_if,question.show_other FROM question, choice" . " WHERE choice.question_name = question.name";
-$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name, question.is_required, question.flag, question.description ,question.groupe,question.category,question.visible_if,question.show_other FROM question, choice" . " WHERE choice.question_name = question.name WHERE choice.question_name = question.name and groupe='$group'";
+$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name, question.is_required, question.flag, question.description ,question.groupe,question.category,question.visible_if,question.show_other FROM question, choice" . " WHERE choice.question_name = question.name and choice.question_name = question.name and groupe LIKE '%$group%'";
 if($group=='ADMIN'){
     $querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name, question.is_required, question.flag, question.description ,question.groupe,question.category,question.visible_if,question.show_other FROM question, choice" . " WHERE choice.question_name = question.name";
 }
+//echo $querry;
 $result = $connect->query($querry);
 
 $output = array('data' => array());
@@ -24,6 +25,8 @@ if ($result->num_rows > 0) {
             $row[3], 
             $row[4], 
             $row[5],
+            $row['groupe'],
+            $row['flag'],
             $linksColumn 
         );
     }
