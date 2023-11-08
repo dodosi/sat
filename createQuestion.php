@@ -81,15 +81,13 @@
         <tr>
           <td>Group:</td>
           <td>
-            <select name="groupe" required="required" class="form-control" onchange="toggleInputVisibility()">
-              <option value="CEO">CEO</option>
-              <option value="CFO">CFO</option>
-              <option value="CPO">CPO</option>
-              <option value="CISO">CISO</option>
-              <option value="CIO">CIO</option>
-              <option value="CTO">CTO</option>
-          </select>
-          </td>
+          <label><input type="checkbox" name="selectedOptions[]" value="CEO">CEO</label><br>
+          <label><input type="checkbox" name="selectedOptions[]" value="CFO">CFO</label><br>
+          <label><input type="checkbox" name="selectedOptions[]" value="CPO">CPO</label><br>
+          <label><input type="checkbox" name="selectedOptions[]" value="CISO">CISO</label><br>
+          <label><input type="checkbox" name="selectedOptions[]" value="CIO">CIO</label><br>
+          <label><input type="checkbox" name="selectedOptions[]" value="CTO">CTO</label><br>
+         </td>
         </tr>
         <tr>
           <td>Category:</td>
@@ -133,12 +131,14 @@ ini_set('display_errors', '1');
     $is_required=addslashes($_POST['is_required']);
     $flag=addslashes($_POST['flag']);
     $description=addslashes($_POST['description']);
-    $groupe=addslashes($_POST['groupe']);
+    //$groupe=addslashes($_POST['groupe[]']);
     $category=addslashes($_POST['category']);
     $visible = addslashes($_POST['visible']);
     $visibleMessage = addslashes($_POST['visibleMessage']);
     $show_other = '';
     $choices='';
+    $selectedOptions = $_POST['selectedOptions'];
+    $groupe=implode(',', $selectedOptions);
     if(isset($_POST['show_other'])){
       $show_other= addslashes($_POST['show_other']);
     }
@@ -173,9 +173,6 @@ ini_set('display_errors', '1');
   }
   ?>
   </td></tr>
-</div>
-<div id="footer">
-
 </div>
 </div>
 <script>
