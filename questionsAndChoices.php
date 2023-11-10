@@ -42,6 +42,7 @@
                     <th>Choices</th>
                     <th>Group</th>
                     <th>Flag</th>
+                    <th>Data Capture</th>
                     <th>Action</th>
                 
                 </tr>

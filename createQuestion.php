@@ -94,6 +94,10 @@
           <td><input type="text" name="category" required="required" class="form-control"><br></td>
         </tr>
         <tr>
+          <td>Data Capture</td>
+          <td><input type="text" name="data_capture" required="required" class="form-control"><br></td>
+        </tr>
+        <tr>
           <td>Visible If:</td>
           <td>
             <label for="input1">Depends on(Question id):</label>
@@ -135,6 +139,7 @@ ini_set('display_errors', '1');
     $category=addslashes($_POST['category']);
     $visible = addslashes($_POST['visible']);
     $visibleMessage = addslashes($_POST['visibleMessage']);
+    $data_capture = addslashes($_POST['data_capture']);
     $show_other = '';
     $choices='';
     $selectedOptions = $_POST['selectedOptions'];
@@ -149,8 +154,8 @@ ini_set('display_errors', '1');
 
     $visibility1 = addslashes($visibility);
     include 'connect.php';
-    $querry="INSERT INTO `question`(`name`, `title`, `type`,`is_required`,`flag`,`description`,`groupe`,`category`,`visible_if`,`show_other`) 
-                          VALUES ('$name','$title','$type','$is_required','$flag','$description','$groupe','$category','$visibility1','$show_other')";
+    $querry="INSERT INTO `question`(`name`, `title`, `type`,`is_required`,`flag`,`description`,`groupe`,`category`,`visible_if`,`show_other`,`data_capture`) 
+                          VALUES ('$name','$title','$type','$is_required','$flag','$description','$groupe','$category','$visibility1','$show_other','$data_capture')";
     $choicesQuery="INSERT INTO `choice`( `question_name`, `choice_name`) 
                                 VALUES ('$name','$choices')";
 
