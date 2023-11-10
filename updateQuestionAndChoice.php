@@ -88,6 +88,10 @@ Category<br>
 <input type="text" name="category" required="required" class="form-control" value="<?php if(isset($_GET['category'])){echo $_GET['category'];}?>"><br>
 </td></tr>
 <tr>
+  <td>Data Capture</td>
+  <td><input type="text" name="data_capture" required="required" class="form-control" value="<?php if(isset($_GET['data_capture'])){echo $_GET['data_capture'];}?>"><br></td>
+</tr>
+<tr>
           <td>Visible If:</td>
           <td>
             <label for="input1">Depends on(Question id):</label>
@@ -121,6 +125,7 @@ Category<br>
         $is_required=addslashes($_POST['is_required']);
         $flag=addslashes($_POST['flag']);
         $description=addslashes($_POST['description']);
+        $data_capture = addslashes($_POST['data_capture']);
         //$groupe=addslashes($_POST['groupe']);
         $category=addslashes($_POST['category']);
         $choice_name=addslashes($_POST['choice_name']);
@@ -128,8 +133,11 @@ Category<br>
         $visibleMessage =addslashes($_POST['visibleMessage']);
         $show_other = '';
         $choices='';
-        $selectedOptions = $_POST['selectedOptions'];
-        $groupe=implode(',', $selectedOptions);
+        $groupe='';
+        if(isset($_POST['selectedOptions'])){
+          $selectedOptions = $_POST['selectedOptions'];
+          $groupe=implode(',', $selectedOptions);
+        }
         if(isset($_POST['show_other'])){
              $show_other= addslashes($_POST['show_other']);
         }
@@ -143,7 +151,7 @@ Category<br>
 
         //$querry="INSERT INTO `question`(`name`, `title`, `type`,`is_required`,`flag`,`description`,`groupe`,`category`,`visible_if`,`show_other`) 
         //VALUES (,'$category','$visibility1','$show_other')";
-        $querry="UPDATE `question` SET `title`='$title',`type`='$type',`is_required`='$is_required',`flag`='$flag',`description`='$description',`groupe`='$groupe',`category`='$category',`visible_if`='$visibility1',`show_other`='$show_other' WHERE row_counter='$row_counter'";
+        $querry="UPDATE `question` SET `title`='$title',`type`='$type',`is_required`='$is_required',`flag`='$flag',`description`='$description',`groupe`='$groupe',`category`='$category',`visible_if`='$visibility1',`show_other`='$show_other',`data_capture`='$data_capture' WHERE row_counter='$row_counter'";
 
         $result=$connect->query($querry);
         if(!$result){
@@ -171,10 +179,6 @@ Category<br>
 ?>
 
 </table>
-
-</div>
-<div id="footer">
-
 </div>
 </div>
 </body>

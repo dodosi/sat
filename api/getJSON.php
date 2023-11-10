@@ -1,9 +1,5 @@
-
 <?php
-
 include 'db_connect.php';
-
-
 function splitStringToArray($inputString) {
     $stringArray = explode(',', $inputString);
     $stringArray = array_map('trim', $stringArray);
@@ -23,8 +19,8 @@ function isStringNotEmpty($inputString) {
 
 $group=$_GET['group'];
 //$group= "CISO";
-$querry = "SELECT question.row_counter, question.name,question.description, question.title, question.type, choice.question_name, choice.choice_name ,question.visible_if, question.is_required , question.show_other" . " FROM question, choice " . " WHERE choice.question_name = question.name and question.groupe='$group'";
-
+$querry = "SELECT question.row_counter, question.name,question.description, question.title, question.type, choice.question_name, choice.choice_name ,question.visible_if, question.is_required , question.show_other" . " FROM question, choice " . " WHERE choice.question_name = question.name and question.groupe LIKE '%$group%'";
+//echo $querry;
 $result = $connect->query($querry);
 
 if ($result) {
