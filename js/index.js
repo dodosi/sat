@@ -72,6 +72,21 @@ async function processData() {
     // Use the fetched data
     console.log('Fetched data:', data);
 	const survey = new Survey.Model(data);
+  alert("Yeah")
+  //test field
+  // Example using local storage
+  survey.onValueChanged.add(function (sender, options) {
+    // Save progress to local storage
+    localStorage.setItem('surveyProgress', JSON.stringify(sender.data));
+    alert("Alert HEre")
+  });
+
+  // Example loading progress from local storage
+  var savedProgress = localStorage.getItem('surveyProgress');
+  if (savedProgress) {
+    survey.data = JSON.parse(savedProgress);
+  }
+  //test field
 	survey.onComplete.add(alertResults);
    $("#surveyContainer").Survey({ model: survey });
   } catch (error) {

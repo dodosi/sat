@@ -9,10 +9,10 @@ $result = $connect->query($querry);
 
 if ($result) {
     $surveyData = array(
-        "title" => $group,
+        "title" => $dataCapture,
         "progressBarType"=> "pages",
         "showProgressBar"=> "both",
-        "description" => "Description",
+        // "description" => "Description",
         "logoPosition" => "right",
         "pages" => array()
     );

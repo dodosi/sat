@@ -2,9 +2,10 @@
 include 'connect.php';
 $group=$_GET['group'];
 //$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name, question.is_required, question.flag, question.description ,question.groupe,question.category,question.visible_if,question.show_other FROM question, choice" . " WHERE choice.question_name = question.name";
-$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name, question.is_required, question.flag, question.description ,question.groupe,question.category,question.visible_if,question.show_other,data_capture FROM question, choice WHERE choice.question_name = question.name and choice.question_name = question.name and groupe LIKE '%$group%'";
+$querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name, question.is_required, question.flag, question.description ,question.groupe,question.category,question.visible_if,question.show_other,data_capture 
+FROM question, choice WHERE choice.question_name = question.name and choice.question_name = question.name and groupe LIKE '%$group%' ORDER BY row_counter ASC";
 if($group=='ADMIN'){
-    $querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name, question.is_required, question.flag, question.description ,question.groupe,question.category,question.visible_if,question.show_other,data_capture FROM question, choice WHERE choice.question_name = question.name";
+    $querry = "SELECT question.row_counter, question.name, question.title, question.type, choice.question_name, choice.choice_name, question.is_required, question.flag, question.description ,question.groupe,question.category,question.visible_if,question.show_other,data_capture FROM question, choice WHERE choice.question_name = question.name ORDER BY row_counter ASC";
 }
 //echo $querry;
 $result = $connect->query($querry);
