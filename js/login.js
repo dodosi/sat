@@ -29,7 +29,7 @@ $(document).ready(function() {
                 if(position==='ADMIN'){
                     window.location.href = "./users.php";  
                 }else{
-                    window.location.href = "./index.html";
+                    window.location.href = "./testing2.php?dc=Security%20Priority%20and%20Investment";
                 }
                 
 

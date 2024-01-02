@@ -31,7 +31,7 @@ include 'menu.html';
 </td><td>
 <!-- <input type="text" name="title" required="required" class="form-control" value="<?php if(isset($_GET['title'])){echo $_GET['title'];}?>"><br> -->
 <textarea name="title" required="required" class="form-control" rows="4" cols="50">
-  <?php if(isset($_GET['name'])){echo $_GET['name'];}?>
+  <?php if(isset($_GET['title'])){echo $_GET['title'];}?>
 </textarea>
 </td></tr>
 <tr><td>

@@ -51,8 +51,11 @@ if (isset($_SESSION['position'])) {
                             <option value="CEO">CEO</option>
                             <option value="CFO">CFO</option>
                             <option value="CISO">CISO</option>
-                            <option value="IT">IT</option>
+                            <option value="CTO">CTO</option>
+                            <option value="CIO">CIO</option>
                             <option value="PO">PO</option>
+                            <option value="CPO">CPO</option>
+                            <option value="P">P</option>
                         </select>
                     </div>
                     <div class="d-grid">

@@ -14,3 +14,13 @@ if($connect->connect_error) {
 }
 
 ?>
+
+mysqldump -u dodosi -p ukudox kaberuka > backup.sql
+mysqldump -u username -p password dbname > backup.sql
+mysqldump -u dodosi -p kaberuka > backup.sql
+scp -i /path/to/private/key.pem username@your-bluehost-server-ip:/path/to/remote/file /path/to/local/destination
+
+scp root@162.240.104.198:/root/backup.sql /
+
+ssh root@162.240.104.198
+

@@ -1,14 +1,37 @@
 $(document).ready(function() {
     // Make an AJAX request to getJSON.php
     var group=localStorage.getItem("group");
-    alert(group);
+    const urlParams = new URLSearchParams(window.location.search);
+    var dataCapture = urlParams.get('dc'); // This will return "%20Security%20Priority%20and%20Investment"
+    // If you want to decode the URL encoded value:
+   dataCapture = decodeURIComponent( dataCapture); 
+    //alert(group+' '+dataCapture);
     $.ajax({
-      url: 'api/getJSON.php?group='+group, // Adjust the path to your getJSON.php script
+      url: 'api/getJSONTesting.php?group='+group+'&data_capture='+dataCapture, // Adjust the path to your getJSON.php script
       method: 'GET',
       dataType: 'json',
       success: function(data) {
         const survey = new Survey.Model(data);
         survey.applyTheme(themeJson);
+        //joke part
+       // Example using local storage
+        survey.onValueChanged.add(function (sender, options) {
+          // Save progress to local storage
+          localStorage.setItem('surveyProgress', JSON.stringify(sender.data));
+          console.log(localStorage.getItem('surveyProgress'));
+          
+        });
+
+        // Example loading progress from local storage
+        var savedProgress = localStorage.getItem('surveyProgress');
+        if (savedProgress) {
+          survey.data = JSON.parse(savedProgress);
+          //alert(JSON.parse(savedProgress));
+        }
+
+
+
+        //joke part
         // survey.onComplete.add(function(sender, options) {
         //   console.log(JSON.stringify(sender.data, null, 3));
         // });
@@ -35,6 +58,8 @@ $(document).ready(function() {
      saveSurveyResults(
          "api/handle.php",username,position,results
     )
+    localStorage.removeItem('surveyProgress');
+    
 }
 function saveSurveyResults(url,username,position, json) {
   $.ajax({  
