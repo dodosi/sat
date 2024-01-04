@@ -1,16 +1,3 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Bootstrap -->
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<title>Create question</title>
-<head>
-    
-</head>
-
-<div class="container" style="background-color:WHITE">
-
-
 <div id="target"></div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- <script>
@@ -20,9 +7,8 @@
 </script> -->
 
 <body>
-<div class="container">
     <?php
-       include 'menu.html';
+        include 'navbar.html';
     ?>
     <h2 align ="center"> Create Question</h2>
     <table border ="0" align="center">
@@ -178,7 +164,6 @@ ini_set('display_errors', '1');
   }
   ?>
   </td></tr>
-</div>
 </div>
 <script>
       function toggleInputVisibility() {

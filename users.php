@@ -19,7 +19,7 @@ if (isset($_SESSION['position'])) {
 </head>
 <body>
     <div class="container">
-        <h2 class="my-4">User Management</h2>
+        <h4 class="my-4">System Users</h4>
         <table class="table table-bordered">
             <thead>
                 <tr>

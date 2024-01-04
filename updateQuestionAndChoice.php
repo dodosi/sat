@@ -6,9 +6,9 @@
 <title>Update question</title>
 <head>
 
-<div class="container" style="background-color:WHITE">
+<div  style="background-color:WHITE">
 <?php
-include 'menu.html';
+ include 'navbar.html';
 ?>
 
 <body style="background-color:#cdeeff">
