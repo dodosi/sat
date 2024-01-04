@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,7 +69,7 @@
     <div class="dark-blue-div">
         <h2>DSbD Self-Assessment Tool  <span style="float: right;">ROLE:
         <?php 
-                session_start();
+                // session_start();
                 if(isset($_SESSION['position'])) {
                     echo $_SESSION['position'];
                 } 
@@ -164,6 +168,9 @@
             sessionStorage.removeItem("questionare");
             sessionStorage.clear();
             window.location="login.php";
+    }
+    function exit(){
+
     }
 
     $(document).ready(function() {

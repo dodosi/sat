@@ -29,25 +29,26 @@
 <body>
     
         <?php
-            include 'menu.html';
+            include 'navbar.html';
         ?>
-        <table id="example" class="display" style="width:100%">
-            <thead>
-                <tr>
-                    <th>NO</th>
-                    <th>Question Name</th>
-                    <th>Title</th>
-                    <th>Type</th>
-                    <th>Question Name</th>
-                    <th>Choices</th>
-                    <th>Group</th>
-                    <th>Flag</th>
-                    <th>Data Capture</th>
-                    <th>Action</th>
-                
-                </tr>
-            </thead>
-        </table>   
+        <div class='container'>
+            <table id="example" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Question Name</th>
+                        <th>Title</th>
+                        <th>Type</th>
+                        <th>Question Name</th>
+                        <th>Choices</th>
+                        <th>Group</th>
+                        <th>Flag</th>
+                        <th>Data Capture</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+            </table>   
+      </div>    
     <script type="text/javascript">
         
             $(document).ready(function () {

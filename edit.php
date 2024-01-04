@@ -37,11 +37,11 @@ if (isset($_SESSION['position'])) {
                         <input type="text" class="form-control" id="username" placeholder="Enter username" required>
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
+                        <label for="password" class="form-label" id="valid">Password</label>
                         <input type="password" class="form-control" id="password" placeholder="Enter password" required>
                     </div>
                     <div class="mb-3">
-                        <label for="cpassword" class="form-label">Confirm Password</label>
+                        <label for="cpassword" class="form-label" id="cvalid">Confirm Password</label>
                         <input type="password" class="form-control" id="cpassword" placeholder="Re-type password" required>
                     </div>
                     <div class="mb-3">
