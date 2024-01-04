@@ -51,6 +51,9 @@ $(document).ready(function() {
         var cpassword = $('#cpassword').val();
         var position = $('#position').val();
        // Send AJAX request to PHP script
+        if(!CheckPassword(password)){
+            return;
+        }
         if(!validateForm(firstname,lastname,username,password,cpassword,position)){
           return;
         }
@@ -116,18 +119,43 @@ function validateForm(firstname,lastname,username,password,cpassword,position){
         return false;
     }
 
-    if (cpassword === '') {
-        alert('Confirm password is required');
-        return false;
-    }
-
     if (password !== cpassword) {
         alert('Passwords do not match');
+        const labelElement = document.getElementById('cvalid');
+        // Update the text of the label element
+         labelElement.innerText = 'Passwords should match!!!';
+         labelElement.style.color = 'red';
         return false;
-    } 
+    } else{
+        const labelElement = document.getElementById('cvalid');
+        // Update the text of the label element
+         labelElement.innerText = 'Confirm Password';
+         labelElement.style.color = 'black'; 
+    }
     if (position==='') {
         alert('Position is required');
         return false;
     } 
   return true;
+}
+function CheckPassword(inputtxt) 
+{ 
+    var passw=  /^[A-Za-z]\w{7,14}$/;
+    passw= /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/;
+    if(inputtxt.match(passw)) 
+    { 
+        const labelElement = document.getElementById('valid');
+        // Update the text of the label element
+         labelElement.innerText = 'Password';
+         labelElement.style.color = 'black';
+    return true;
+    }
+    else
+    { 
+        const labelElement = document.getElementById('valid');
+        // Update the text of the label element
+         labelElement.innerText = 'Password should contain Uppercase, Lowercase and Numbers';
+         labelElement.style.color = 'red';
+    return false;
+    }
 }
