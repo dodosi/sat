@@ -11,6 +11,7 @@
 		if($resultl){
 			while($row=$resultl->fetch_assoc()){
 				$_SESSION['position']=$row['position'];
+				$_SESSION['username']=$row['username'];
 				$postion= $row['position'];
 				$username= $row['username'];
 			}
