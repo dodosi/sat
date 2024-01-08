@@ -1,11 +1,11 @@
 $(document).ready(function() {
-    // Make an AJAX request to getJSON.php
-    var group=localStorage.getItem("group");
-    const urlParams = new URLSearchParams(window.location.search);
-    var dataCapture = urlParams.get('dc'); // This will return "%20Security%20Priority%20and%20Investment"
-    // If you want to decode the URL encoded value:
-   dataCapture = decodeURIComponent( dataCapture); 
-    //alert(group+' '+dataCapture);
+     // Make an AJAX request to getJSON.php
+     var group=localStorage.getItem("group");
+     const urlParams = new URLSearchParams(window.location.search);
+     var dataCapture = urlParams.get('dc'); // This will return "%20Security%20Priority%20and%20Investment"
+     // If you want to decode the URL encoded value:
+     dataCapture = decodeURIComponent(dataCapture); 
+     localStorage.setItem("data_capture",dataCapture);
     $.ajax({
       url: 'api/getJSONTesting.php?group='+group+'&data_capture='+dataCapture, // Adjust the path to your getJSON.php script
       method: 'GET',
@@ -54,33 +54,35 @@ $(document).ready(function() {
     const results = JSON.stringify(sender.data);
     var username=localStorage.getItem("username");
     var position=localStorage.getItem("position");
+    var dataCapture=localStorage.getItem("data_capture")
      //console.log(results);
      saveSurveyResults(
-         "api/handle.php",username,position,results
+         "api/handle.php",username,position,dataCapture,results
     )
     localStorage.removeItem('surveyProgress');
     
 }
-function saveSurveyResults(url,username,position, json) {
+function saveSurveyResults(url,username,position,dataCapture,json) {
   $.ajax({  
- type: 'POST',  
- url: url, 
- data:{
-   username: username,
-   position: position,
-   json:json
- },
- success: function(response) {
-   console.log(response);
-   var resultContainer = document.getElementById("surveyContainer");
-   if(response==='ok'){
-    //resultContainer.innerHTML = "<h3>Data Submitted</h3>";
-   }else{
-     resultContainer.innerHTML = "<h3>Oops!! Data were not saved to server, try again</h3>";
-   }
- },
-error:function(error){
-  console.log(error);
-}
+  type: 'POST',  
+  url: url, 
+  data:{
+    username: username,
+    position: position,
+    data_capture:dataCapture,
+    json:json
+  },
+  success: function(response) {
+    console.log(response);
+    var resultContainer = document.getElementById("surveyContainer");
+    if(response==='ok'){
+      //resultContainer.innerHTML = "<h3>Data Submitted</h3>";
+    }else{
+      resultContainer.innerHTML = "<h3>Oops!! Data were not saved to server, try again</h3>";
+    }
+  },
+  error:function(error){
+    console.log(error);
+  }
 });
 }

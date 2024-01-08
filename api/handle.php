@@ -9,10 +9,14 @@
     $post=$_POST['json'];
     $respondent=$_POST['username'];
     $survey_id=$_POST['position'];
+    $dataCapture=$_POST['data_capture'];
 
     $sql="INSERT INTO `results`(`responder`, `survey_id`, `results`) 
                     VALUES ('$respondent','$survey_id','$post')";
-    if($connect->query($sql) === TRUE) {
+
+    $sql2="INSERT INTO `logs`(`data_capture`, `username`) 
+                      VALUES ('$dataCapture','$respondent')";                
+    if($connect->query($sql) === TRUE && $connect->query($sql2) === TRUE) {
         $response='ok';
     } else {
         $response='FAILED '.$sql;

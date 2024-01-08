@@ -59,6 +59,13 @@
     .white-text {
         color: white;
     }
+    .badge {
+    background-color: #007bff; /* Blue color */
+    color: white; /* White text */
+    padding: 5px 10px; /* Padding */
+    font-size: 12px; /* Font size */
+    border-radius: 50%; /* Rounded corners for a circular badge */
+  }
 </style>
 </head>
 <body>
@@ -85,8 +92,12 @@
                 <!-- Card 1 -->
                 <div class="card blue-card rounded-border-div-1">
                     <div class="card-body">
-                        <h5 class="card-title" style=>
+                        <h5 class="card-title">
                           <a href="testing2.php?dc=Security Priority and Investment" style="color: white;"> <p>Security Priority and Investment </p></a>
+                          <?php
+                             require_once 'utils.php';
+                             checkStatus('Security Priority and Investment');
+                            ?>
                         </h5>
                     </div>
                 </div>
@@ -96,7 +107,10 @@
                     <div class="card-body">
                         <h5 class="card-title white-text" >
                         <a href="testing2.php?dc=Incidents and Breaches" style="color: white;"> <p>Incidents and Breaches </p></a>
-                    
+                        <?php
+                             require_once 'utils.php';
+                             checkStatus('Incidents and Breaches')
+                            ?>
                         </h5>
                     </div>
                 </div>
@@ -106,7 +120,10 @@
                     <div class="card-body">
                         <h5 class="card-title">
                           <a href="testing2.php?dc=Technology and Data Usage" style="color: white;"> <p>Technology and Data Usage </p></a>
-                        
+                           <?php
+                             require_once 'utils.php';
+                             checkStatus('Technology and Data Usage','yeye')
+                            ?>
                         </h5>
                     </div>
                 </div>
@@ -116,7 +133,11 @@
                     <div class="card-body">
                         <h5 class="card-title">
                         <a href="testing2.php?dc=Security in technology adoption" style="color: white;"> <p>Security in technology adoption</p></a>
-                        </h5>
+                        <?php
+                             require_once 'utils.php';
+                             checkStatus('Security in technology adoption','yeye')
+                        ?>
+                       </h5>
                     </div>
                 </div>
                 
@@ -125,7 +146,11 @@
                     <div class="card-body">
                         <h5 class="card-title">
                         <a href="testing2.php?dc=DSbD specific awareness" style="color: white;"> <p>DSbD-specific awareness </p></a>
-                        </h5>
+                        <?php
+                             require_once 'utils.php';
+                             checkStatus('DSbD specific awareness','yeye')
+                        ?>   
+                    </h5>
                     </div>
                 </div>
                 
