@@ -13,15 +13,7 @@
 </head>
 <body>
 <!-- Embedding Superset Dashboard URL within an iframe -->
- <?php
-  if(isset($_GET['dash'])){
-    $dash=$_GET['dash'];
-    $link='http://128.243.28.79:8088/superset/dashboard/'.$dash.'/?standalone=1&show_filters=0';
-  }
- ?>
-<!-- http://128.243.28.79:8088/superset/dashboard/SPI/?
-http://localhost:8088/superset/dashboard/my-dashboard/?standalone=1&show_filters=0 -->
-<iframe src="<?php echo $link?>" 
+<iframe src="http://162.240.104.198:8088/dashboard/list/?standalone=1" 
         width="100%" 
         height="800px" 
         frameborder="0">
